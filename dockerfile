@@ -1,3 +1,3 @@
 FROM nginx
-ADD ./index.html /usr/local/var/www/html
+ADD ./index.html /usr/share/nginx/html/
 ENTRYPOINT service nginx start && bash
