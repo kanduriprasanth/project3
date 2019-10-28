@@ -1,3 +1,3 @@
 FROM nginx
 ADD ./index.html /usr/share/nginx/html/
-ENTRYPOINT service nginx start
+ENTRYPOINT service nginx start && /bin/bash
