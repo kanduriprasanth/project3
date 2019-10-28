@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   tasks:
+           - name: pull the docker image from registery
+             raw: docker pull kanduriprasanth/pipeline2
+
+           - name: remove the exisiting container if already present
+             raw: docker rm -f web
+             ignore_errors: true
+
+           - name: spin the container
+             raw: docker run -dti --name web -p 21:80 kanduriprasanth/pipeline2 /bin/bash
+...
