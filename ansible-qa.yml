@@ -2,7 +2,7 @@
  - hosts: qa
    tasks:
       - name: pull the image from dockerhub
-        raw: docker pull kandusiprasanth/pipeline2
+        raw: docker pull kanduriprasanth/pipeline2
         tags:
           - dev
         
