@@ -1,20 +1,20 @@
 ---
  - hosts: qa
    tasks:
-      - name: pull the image from dockerhub
-        raw: docker pull kanduriprasanth/pipeline2
-        tags:
-          - dev
+   - name: pull the image from dockerhub
+     raw: docker pull kanduriprasanth/pipeline2
+     tags:
+       - dev
         
-      - name: Remove existing container if already present
-        raw: docker rm -f web
-        ignore_errors: true
-        tags:
-          - dev
+   - name: Remove existing container if already present
+     raw: docker rm -f web
+     ignore_errors: true
+     tags:
+       - dev
 
-      - name: Spin the container
-        raw: docker run -it --name web -p 21:80 kanduriprasanth/pipeline2 /bin/bash
-        tags:
-          - dev
+   - name: Spin the container
+     raw: docker run -it --name web -p 21:80 kanduriprasanth/pipeline2 /bin/bash
+     tags:
+       - dev
 ...
 
