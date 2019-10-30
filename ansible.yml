@@ -29,7 +29,7 @@
        - qa
    
    - name: spin the container
-     raw: docker run -dit --name web1 -p 22:80 kanduriprasanth/pipelien2 /bin/bash
+     raw: docker run -dit --name web1 -p 22:80 kanduriprasanth/pipeline2 /bin/bash
      tags:
        - qa
 ...
